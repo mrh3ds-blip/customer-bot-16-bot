@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: customer-bot-16
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: CUSTOMER_BOT_TOKEN
+        sync: false
+      - key: CUSTOMER_ADMIN_ID
+        sync: false
+      - key: BASE_URL
+        sync: false
+      - key: PAYMENT_LINK
+        sync: false
+      - key: CARD_NUMBER
+        sync: false
+      - key: CARD_HOLDER
+        sync: false
+      - key: ZARINPAL_MERCHANT_ID
+        sync: false
+      - key: ZARINPAL_SANDBOX
+        value: "false"
+      - key: SETTINGS_FILE
+        value: "./data/settings.json"
